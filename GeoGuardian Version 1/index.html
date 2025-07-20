@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeoGuardian | Monitoreo Ambiental Inteligente</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="geoguardian-logo.jpg" type="image/png">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js"></script>
+</head>
+<body>
+    <header>
+        <img src="geoguardian-logo.jpg" alt="GeoGuardian" class="logo">
+        <h1>GeoGuardian</h1>
+        <p class="slogan">Vigilancia ambiental inteligente en tiempo real</p>
+    </header>
+
+    <nav>
+        <a href="#alertas">Alertas</a>
+        <a href="#dashboard">Dashboard</a>
+        <a href="#grafica">Datos</a>
+        <a href="#historial">Historial</a>
+        <a href="#prevencion">Prevención</a>
+        <a href="#mapa">Mapa</a>
+        <a href="#contacto">Emergencia</a>
+    </nav>
+
+    <main>
+        <section id="alertas" class="seccion">
+            <h2>🔔 Alertas en Tiempo Real</h2>
+            <div class="alerta" id="deslizamiento-alert">📡 Estado del Terreno: Normal</div>
+            <div class="alerta" id="aire-alert">🌫️ Calidad del Aire: Buena</div>
+        </section>
+
+        <section id="dashboard" class="seccion">
+            <h2>📊 Dashboard Ambiental</h2>
+            <div class="indicadores">
+                <div class="medidor">
+                    <canvas id="aireGauge"></canvas>
+                    <p>Calidad del Aire</p>
+                </div>
+                <div class="medidor">
+                    <canvas id="terrenoGauge"></canvas>
+                    <p>Estado del Terreno</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="grafica" class="seccion">
+            <h2>📈 Registro Ambiental</h2>
+            <canvas id="graficaCanvas"></canvas>
+        </section>
+
+        <section id="historial" class="seccion">
+            <h2>📑 Historial de Alertas</h2>
+            <table id="alertTable">
+                <thead>
+                    <tr>
+                        <th>Fecha</th>
+                        <th>Tipo</th>
+                        <th>Estado</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+            <button onclick="exportarHistorial()">📄 Exportar a CSV</button>
+        </section>
+
+        <section id="prevencion" class="seccion">
+            <h2>🛡️ ¿Qué hacer ante una emergencia?</h2>
+            <ul>
+                <li>Aléjate de zonas inestables tras lluvias fuertes.</li>
+                <li>Refúgiate en zonas seguras designadas.</li>
+                <li>Mantente informado por medios oficiales y GeoGuardian.</li>
+                <li>Evita respirar aire contaminado sin protección.</li>
+                <li>Reporta signos de deslizamientos o alta contaminación.</li>
+            </ul>
+        </section>
+
+        <section id="mapa" class="seccion">
+            <h2>🗺️ Ubicación de Monitoreo</h2>
+            <iframe src="https://www.google.com/maps/embed?..." width="100%" height="300" style="border:0;" allowfullscreen></iframe>
+        </section>
+
+        <section id="contacto" class="seccion">
+            <h2>🚨 Emergencia Inmediata</h2>
+            <button onclick="alert('📞 Contactando servicios de emergencia…')">📞 Llamar a emergencias</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>GeoGuardian © 2025 | Proyecto Feria de Ciencias</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
