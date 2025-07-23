@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Detalles de la Alerta</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Leaflet (mapas) -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+  <!-- Chart.js para gráficas -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Detalles de Alerta</h1>
+  </header>
+
+  <section>
+    <div class="card">
+      <h2>Ubicación en tiempo real</h2>
+      <div id="map" style="height: 300px; width: 100%; border-radius: 10px;"></div>
+      <p><strong>Latitud:</strong> <span id="lat">---</span></p>
+      <p><strong>Longitud:</strong> <span id="lon">---</span></p>
+      <p><strong>Hora de alerta:</strong> <span id="hora">---</span></p>
+    </div>
+
+    <div class="sensor">
+      <h3>Sensor de Vibración (Micro:bit)</h3>
+      <p>Valor actual: <span id="vibrationValue">Desconectado</span></p>
+      <button id="connectButton">Conectar Micro:bit</button>
+      <button id="testAlertButton">Probar Alerta Manual</button>
+      <canvas id="chartCanvas" height="100"></canvas>
+    </div>
+
+    <div class="card">
+      <h2>Historial de vibración</h2>
+      <canvas id="detalleChart" height="100"></canvas>
+    </div>
+
+    <div class="card">
+      <h2>Tabla de vibración</h2>
+      <table id="vibrationTable">
+        <thead>
+          <tr>
+            <th>Hora</th>
+            <th>Vibración</th>
+          </tr>
+        </thead>
+        <tbody id="vibrationTableBody"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <script src="detalles.js"></script>
+</body>
+</html>

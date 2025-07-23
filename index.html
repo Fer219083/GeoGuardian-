@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GeoGuardian</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div id="connectPrompt" class="modal">
+    <div class="modal-content">
+      <p>🌍 GeoGuardian necesita conectarse a tu micro:bit.</p>
+      <button id="connectBtn">Conectar ahora</button>
+    </div>
+  </div>
+
+  <header>
+    <div>
+      <h1>GeoGuardian</h1>
+      <p>Protegiendo vidas con tecnología</p>
+    </div>
+    <div class="status" id="status">🔌 Desconectado</div>
+    <button id="alertButton" class="alert-button">Sin Alertas</button>
+    <a href="detalles.html" class="revisar-detalles">Revisar Detalles</a>
+  </header>
+
+  <section>
+    <div class="card">
+      <h2>¿Qué es GeoGuardian?</h2>
+      <p>Un sistema de alertas tempranas con sensores e inteligencia de datos para prevenir desastres por deslizamientos de tierra.</p>
+    </div>
+
+    <div class="card">
+      <h2>¿Por qué en Risaralda – Pereira?</h2>
+      <p>Zona montañosa y lluviosa, con barrios en laderas inestables. GeoGuardian ofrece una solución proactiva con visión nacional.</p>
+    </div>
+
+    <div class="card">
+      <h2>¿Cómo funciona?</h2>
+      <p>Recolectamos datos en tiempo real desde sensores para detectar humedad y vibraciones peligrosas. Se envían alertas a comunidades y autoridades.</p>
+    </div>
+
+    <div class="card">
+      <h2>Impacto esperado</h2>
+      <ul>
+        <li>✅ Reducción de víctimas humanas</li>
+        <li>✅ Preparación comunitaria</li>
+        <li>✅ Decisiones informadas</li>
+        <li>✅ Escalabilidad nacional</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Futuro del Proyecto</h2>
+      <p>Integración con IDEAM, expansión a zonas rurales y alertas móviles personalizadas.</p>
+    </div>
+  </section>
+
+  <footer>
+    GeoGuardian © 2025 – Tecnología para salvar vidas
+  </footer>
+
+  <div id="alertOverlay" class="alert-overlay">
+    <span class="alert-x">X</span>
+    <button id="verDetallesBtn" class="ver-detalles-btn">🔍 Ver Detalles</button>
+  </div>
+
+  <audio id="beepSound">
+    <source src="https://actions.google.com/sounds/v1/alarms/beep_short.ogg" type="audio/ogg">
+  </audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
